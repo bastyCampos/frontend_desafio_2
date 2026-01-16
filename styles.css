@@ -1,14 +1,14 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-body{
+body {
     height: 100vh;
     background-image: url(./images/bg-desktop.svg);
     background-repeat: no-repeat;
@@ -17,7 +17,7 @@ body{
     padding: 64px 0;
 }
 
-.page{
+.page {
     max-width: 1440px;
     height: 100%;
     margin: auto;
@@ -25,37 +25,38 @@ body{
     grid-template-rows: 64px 1fr 64px;
 }
 
-main{
+main {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 48px;
 }
 
-.container-action{
+.container-action {
     display: flex;
     flex-direction: column;
     align-items: start;
     padding: 8%;
     height: 100%;
-    
+
 }
 
-.container-action h1{
+.container-action h1 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 2.5rem;
     color: #fff;
 }
 
-.container-action p{
+.container-action p {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     font-size: 1rem;
     color: #fff;
     padding: 16px 0;
 }
-.container-action button{
+
+.container-action button {
     width: 200px;
     height: 60px;
     background-color: #fff;
@@ -68,16 +69,16 @@ main{
     color: hsl(257, 40%, 49%);
     cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    transition: 0.4s;    
+    transition: 0.4s;
 }
 
-footer{
+footer {
     display: flex;
     justify-content: end;
     gap: 16px;
 }
 
-footer a{
+footer a {
     display: grid;
     justify-content: center;
     align-items: center;
@@ -90,12 +91,50 @@ footer a{
     transition: 0.4s;
 }
 
-.container-action button:hover{
+.container-action button:hover {
     background-color: hsl(300, 69%, 71%);
     color: #fff;
 }
 
-footer a:hover{
+footer a:hover {
     border-color: hsl(300, 69%, 71%);
     color: hsl(300, 69%, 71%);
+}
+
+@media (max-width: 480px) {
+    body {
+        background-image: url(./images/bg-mobile.svg);
+        padding: 24px;
+    }
+
+    .page {
+        flex-direction: column;
+    }
+
+    main {
+        flex-direction: column;
+        text-align: center;
+        gap: 0;
+    }
+
+    main img {
+        width: 100%;
+    }
+
+    .container-action {
+        align-items: center;
+        padding: 0 8%;
+    }
+
+    .container-action h1 {
+        font-size: 1.5rem;
+    }
+
+    .container-action p {
+        font-size: 0.9rem;
+    }
+
+    footer {
+        justify-content: center;
+    }
 }
